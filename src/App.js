@@ -24,7 +24,7 @@ const LOADING = "LOADING";
 const fetchQuote = () => (dispatch) => {
   dispatch({ type: LOADING });
   fetch(
-    "/src/quotes.json"
+    "https://gist.github.com/remipixel/bc661fb9b43b6000cfe4fd085206ef6e"
   ).then((res) => res.json())
     .then((json) => {
       dispatch({ type: FETCH_QUOTE, list: json.quotes })
